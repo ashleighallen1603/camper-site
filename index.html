@@ -6,8 +6,10 @@
   <style>
     body { font-family: Arial; margin: 0; background: #f5f5f5; color: #111; }
     .hero { background: #000; color: white; text-align: center; padding: 40px; }
-    .section { padding: 30px; max-width: 800px; margin: auto; text-align: center; }
-    .card { background: white; padding: 20px; margin: 10px; border-radius: 10px; }
+    .section { padding: 30px; max-width: 1000px; margin: auto; text-align: center; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+    .card { background: white; padding: 15px; border-radius: 10px; }
+    .card img { width: 100%; height: 180px; object-fit: cover; border-radius: 8px; }
     .btn { background: black; color: white; padding: 12px 20px; text-decoration: none; display: inline-block; margin-top: 10px; }
   </style>
 </head>
@@ -15,22 +17,34 @@
 
 <div class="hero">
   <h1>Atlantic Coast Campers</h1>
-  <p><i>by Ash • St Ives, Cornwall</i></p>
+  <p><i> • St Ives, Cornwall</i></p>
   <p>Simple, reliable camper van hire – from £95 per night</p>
-  <a class="btn" href="https://wa.me/0774689384">Message to Check Availability</a>
+  <a class="btn" href="https://wa.me/447746879384?text=Hi%2C%20I%27m%20interested%20in%20your%20camper%20van">Message to Check Availability</a>
 </div>
 
 <div class="section">
   <h2>About</h2>
   <p>Atlantic Coast Campers is a small independent setup based in St Ives, run by Ash.</p>
-  <p>What started as buying and refurbishing camper vans has grown into offering them out for others to enjoy Cornwall in a flexible and affordable way.</p>
+  <p>What started as buying and refurbishing camper vans has grown into offering them out for others to enjoy Cornwall in a flexible and affordable way.including longer-term use where suitable.</p>
 </div>
 
 <div class="section">
-  <h2>Vans</h2>
-  <div class="card">Compact Camper – £95/night</div>
-  <div class="card">Explorer Van – £120/night</div>
-  <div class="card">Premium Camper – £175/night</div>
+  <h2>Example Setups</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70" alt="Camper Van">
+      <p>Compact Camper – from £95/night</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5ce" alt="Camper Interior">
+      <p>Explorer Van – from £120/night</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1493558103817-58b2924bce98" alt="Van by Coast">
+      <p>Premium Camper – up to £175/night</p>
+    </div>
+  </div>
+  <p style="margin-top:10px; font-size:14px;">Availability varies – message to check</p>
 </div>
 
 <div class="section">
