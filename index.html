@@ -1,57 +1,214 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Atlantic Coast Campers</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body { font-family: Arial; margin: 0; background: #f5f5f5; color: #111; }
-    .hero { background: #000; color: white; text-align: center; padding: 40px; }
-    .section { padding: 30px; max-width: 1000px; margin: auto; text-align: center; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
-    .card { background: white; padding: 15px; border-radius: 10px; }
-    .card img { width: 100%; height: 180px; object-fit: cover; border-radius: 8px; }
-    .btn { background: black; color: white; padding: 12px 20px; text-decoration: none; display: inline-block; margin-top: 10px; }
+    :root{
+      --bg:#0b0f14;
+      --card:#111823;
+      --text:#e9eef5;
+      --muted:#a9b4c0;
+      --accent:#4da3ff;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:#f4f6f8;
+      color:#111;
+    }
+
+    /* HERO */
+    .hero{
+      background:linear-gradient(135deg, #000 0%, #111 60%, #0b0f14 100%);
+      color:white;
+      text-align:center;
+      padding:70px 20px;
+    }
+
+    .hero h1{
+      font-size:42px;
+      margin:0;
+      letter-spacing:1px;
+    }
+
+    .hero p{
+      margin:10px 0;
+      color:#cfd6dd;
+    }
+
+    .tag{
+      font-style:italic;
+      color:#9fb0c0;
+      margin-top:5px;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:20px;
+      padding:14px 22px;
+      background:var(--accent);
+      color:white;
+      text-decoration:none;
+      border-radius:8px;
+      font-weight:bold;
+    }
+
+    /* SECTIONS */
+    .section{
+      max-width:1100px;
+      margin:auto;
+      padding:60px 20px;
+      text-align:center;
+    }
+
+    .section h2{
+      font-size:28px;
+      margin-bottom:10px;
+    }
+
+    .section p{
+      color:#444;
+      max-width:700px;
+      margin:auto;
+      line-height:1.6;
+    }
+
+    /* CARDS */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+      gap:20px;
+      margin-top:30px;
+    }
+
+    .card{
+      background:white;
+      border-radius:14px;
+      overflow:hidden;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+      transition:0.2s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+    }
+
+    .card img{
+      width:100%;
+      height:180px;
+      object-fit:cover;
+    }
+
+    .card-body{
+      padding:15px;
+    }
+
+    .price{
+      font-weight:bold;
+      color:#111;
+      margin-top:5px;
+    }
+
+    /* INFO BAR */
+    .info{
+      background:#0b0f14;
+      color:white;
+      padding:40px 20px;
+      text-align:center;
+    }
+
+    .info p{
+      color:#b9c6d3;
+    }
+
+    /* FOOTER */
+    .footer{
+      background:#000;
+      color:#aaa;
+      text-align:center;
+      padding:20px;
+      font-size:13px;
+    }
+
+    @media(max-width:600px){
+      .hero h1{font-size:32px;}
+    }
   </style>
 </head>
 <body>
 
-<div class="hero">
-  <h1>Atlantic Coast Campers</h1>
-  <p><i> • St Ives, Cornwall</i></p>
-  <p>Simple, reliable camper van hire – from £95 per night</p>
-  <a class="btn" href="https://wa.me/447746879384?text=Hi%2C%20I%27m%20interested%20in%20your%20camper%20van">Message to Check Availability</a>
-</div>
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Atlantic Coast Campers</h1>
+    <div class="tag">by Ash • St Ives, Cornwall</div>
+    <p>Premium camper van hire for coastal escapes</p>
+    <p>From £95 – £175 per night</p>
+    <a class="btn" href="https://wa.me/447746879384?text=Hi%20I%27m%20interested%20in%20a%20camper%20van%20hire">Check Availability</a>
+  </div>
 
-<div class="section">
-  <h2>About</h2>
-  <p>Atlantic Coast Campers is a small independent setup based in St Ives, run by Ash.</p>
-  <p>What started as buying and refurbishing camper vans has grown into offering them out for others to enjoy Cornwall in a flexible and affordable way.including longer-term use where suitable.</p>
-</div>
+  <!-- ABOUT -->
+  <div class="section">
+    <h2>About Atlantic Coast Campers</h2>
+    <p>
+      A small independent camper van setup based in St Ives, offering carefully prepared vans for coastal adventures, weekend escapes, and flexible longer stays.
+    </p>
+  </div>
 
-<div class="section">
-  <h2>Example Setups</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70" alt="Camper Van">
-      <p>Compact Camper – from £95/night</p>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5ce" alt="Camper Interior">
-      <p>Explorer Van – from £120/night</p>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1493558103817-58b2924bce98" alt="Van by Coast">
-      <p>Premium Camper – up to £175/night</p>
+  <!-- VANS -->
+  <div class="section">
+    <h2>Our Vans</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <img src="https://source.unsplash.com/800x600/?campervan" />
+        <div class="card-body">
+          <h3>Compact Camper</h3>
+          <div class="price">From £95/night</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://source.unsplash.com/800x600/?campervan,interior" />
+        <div class="card-body">
+          <h3>Explorer Van</h3>
+          <div class="price">From £120/night</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://source.unsplash.com/800x600/?campervan,coast" />
+        <div class="card-body">
+          <h3>Premium Camper</h3>
+          <div class="price">Up to £175/night</div>
+        </div>
+      </div>
+
     </div>
   </div>
-  <p style="margin-top:10px; font-size:14px;">Availability varies – message to check</p>
-</div>
 
-<div class="section">
-  <h2>Contact</h2>
-  <p>Email: hello@atlanticcoastcampers.co.uk</p>
-  <p>Based in St Ives, Cornwall</p>
-</div>
+  <!-- INFO -->
+  <div class="info">
+    <h2>Good to know</h2>
+    <p>Flexible hire options available. Message to check availability and recommendations based on your trip.</p>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="section">
+    <h2>Contact</h2>
+    <p>St Ives, Cornwall</p>
+    <p>hello@atlanticcoastcampers.co.uk</p>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    © 2026 Atlantic Coast Campers
+  </div>
 
 </body>
 </html>
